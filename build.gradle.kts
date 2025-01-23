@@ -9,7 +9,7 @@ dependencies {
 	modImplementation(libs.fabric.api)
 }
 
-fun String.toCase(sep: String) = replace("(?<=.)(?=\\p{Upper})".toRegex(), sep).lowercase()
+fun String.toCase(sep: String) = replace("(?<=\\p{Lower})(?=\\p{Upper})".toRegex(), sep).lowercase()
 
 val modGroup: String by project
 val modName: String by project
